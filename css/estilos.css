@@ -1,0 +1,331 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+
+body, html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	background: -webkit-radial-gradient(
+					#407BA0,
+					#214154,
+					#13242F
+				);
+}
+
+h1{
+	font-size: 4em;
+	color: lightsteelblue;
+	text-shadow: 7px 7px 10px #000;
+}
+
+h2{
+	font-size: 1.5em;
+	text-decoration: underline;
+	color: silver;
+	text-shadow: 2px 4px 5px #000;
+}
+
+p{
+	font-size: 1.1em;
+	color: white;
+}
+
+aside{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	padding-top: 12%;
+	width: 35%;
+}
+
+aside>ul{
+	list-style: none;
+	padding: 0;
+}
+
+aside>ul>li{
+	font-size: 1.4em;
+	height: 40px;
+	font-family: 'Lobster Two', cursive;
+	font-weight: 600;
+	color: silver;
+	text-shadow: 2px 4px 5px #000;
+}
+
+aside>ul>li:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+article{
+	position: absolute;
+	top: 0;
+	right: 3%;
+	bottom: 0;
+	margin: auto;
+	padding-top: 12%;
+	width: 30%;
+}
+
+/* CLASES CSS */
+
+.nubes, .mapa, .anillo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	margin-top: 10em;
+}
+
+.anillo{
+	margin-top: 95px;
+	visibility: hidden;
+	left: -20%;
+	width: 300px;
+	height: 35px;
+	background-color: brown;
+	border-radius: 50%;
+	z-index: 25;
+	background: url(../img/anillo.png);
+	background-size: cover;
+	box-shadow: -30px -10px 0 0 rgba(0,0,0,0.1) inset;
+	-webkit-animation: anillo-girando 10s infinite linear;
+}
+
+@-webkit-keyframes anillo-girando{
+	from{
+		background-position: left center;
+	}
+
+	to{
+		background-position: -300px center;
+	}
+}
+
+.cohete{
+	background: url(../img/cohete.png);
+	background-size: contain;
+	position: absolute;
+	width: 35px;
+	height: 70px;
+	z-index: -5;
+	transform: rotate(70deg);
+  	-webkit-animation: cohete 7s infinite linear;
+}
+
+@-webkit-keyframes cohete{
+	0%{
+  		left: -500px;
+  		bottom: -100px;
+	}
+
+	100%{
+		left: 1900px;
+		bottom: 1000px;
+	}
+}
+
+.ovni{
+	background: url(../img/ovni.png);
+	background-size: cover;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 47%;
+	bottom: -200px;
+	z-index: 1;
+	transform: rotate(180deg);
+	-webkit-animation: ovni 10s infinite linear;
+	animation-play-state: paused;
+}
+
+@-webkit-keyframes ovni{
+	0%{
+  		bottom: -200px;
+	}
+
+	40%{
+
+		bottom: 160px;
+	}
+
+	60%{
+
+		bottom: 160px;
+	}
+
+	100%{
+		bottom: -200px;
+	}
+}
+
+.nubes{
+	width: 220px;
+	height: 220px;
+}
+
+.nubes>img{
+	position: relative;
+	z-index: 20;
+	margin-top: 10em;
+}
+
+.mapa{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: url(../img/mapa.png);
+	background-size: cover;
+	box-shadow: -30px -20px 0 0 rgba(0,0,0,.15) inset,
+				-70px -30px 0 0 rgba(0,0,0,.1) inset,
+				5px 5px 0 0 rgba(255,255,255,.2) inset;
+	-webkit-animation: planeta-girando 7s infinite linear;
+}
+
+@-webkit-keyframes planeta-girando{
+	from{
+		background-position: left center;
+	}
+
+	to{
+		background-position: -396px center;
+	}
+}
+
+.estrella{
+	width: 2px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.e1{
+	top: 30%;
+	left: 50%;
+}
+
+.e2{
+	top: 10%;
+	left: 30%;
+}
+
+.e3{
+	top: 50%;
+	left: 70%;
+}
+
+.e4{
+	top: 80%;
+	left: 30%;
+}
+
+.e5{
+	top: 20%;
+	left: 80%;
+}
+
+.e6{
+	top: 80%;
+	left: 80%;
+}
+
+.e7{
+	top: 40%;
+	left: 90%;
+}
+
+.e8{
+	top: 70%;
+	left: 25%;
+}
+
+.e9{
+	top: 50%;
+	left: 30%;
+}
+
+.e10{
+	top: 25%;
+	left: 15%;
+}
+
+.e11{
+	top: 75%;
+	left: 15%;
+}
+.e12{
+	top: 80%;
+	left: 65%;
+}
+
+.estrella:nth-child(2n){
+	-webkit-animation: estrella-par 2s infinite;
+}
+
+@-webkit-keyframes estrella-par{
+	0% , 80%{
+		box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+	}
+
+	100%{
+		box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+	}
+}
+
+.estrella:nth-child(2n+1){
+	-webkit-animation: estrella-impar 2s infinite;
+}
+
+@-webkit-keyframes estrella-impar{
+	0% ,35%, 50%{
+		box-shadow: 0 0 3px 3px rgba(255,255,255,.3);
+	}
+
+	45%{
+		box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+	}
+}
+
+@media screen and (max-width: 900px){
+
+	article{
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 80%;
+  		top: 75%;
+  		padding-top: 0;
+	}
+}
+
+@media screen and (max-width: 1400px){
+
+	.nubes, .mapa{
+		margin-top: auto;
+	}
+
+	.nubes>img{
+		margin-top: 0;
+	}
+
+	.anillo{
+		margin-top: 95px;
+	}
+}
+
+@media screen and (min-width: 1401px){
+	
+	.anillo{
+		margin-top: 15em;
+	}
+}

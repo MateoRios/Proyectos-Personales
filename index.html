@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/estilos.css">
+		<title>Sistema Solar</title>
+	</head>
+	<body onload="tierra();">
+		<h1>Sistema Solar</h1>
+
+		<!-- estrellas -->
+		<div class="estrella e1"></div>
+		<div class="estrella e2"></div>
+		<div class="estrella e3"></div>
+		<div class="estrella e4"></div>
+		<div class="estrella e5"></div>
+		<div class="estrella e6"></div>
+		<div class="estrella e7"></div>
+		<div class="estrella e8"></div>
+		<div class="estrella e9"></div>
+		<div class="estrella e10"></div>
+		<div class="estrella e11"></div>
+		<div class="estrella e12"></div>
+
+		<!-- menu planetas -->
+		<aside>
+			<ul>
+				<li onclick="mercurio()">Mercurio</li>
+				<li onclick="venus()">Venus</li>
+				<li onclick="tierra()">Tierra</li>
+				<li onclick="marte()">Marte</li>
+				<li onclick="jupiter()">Júpiter</li>
+				<li onclick="saturno()">Saturno</li>
+				<li onclick="urano()">Urano</li>
+				<li onclick="neptuno()">Neptuno</li>
+			</ul>
+		</aside>
+
+		<!-- cohete -->
+		<div class="cohete"></div>
+
+		<!-- ovni -->
+		<div class="ovni"></div>
+
+		<!-- planetas -->
+		<div class="nubes">
+			<img id="imgNubes" src="img/nubes.png" alt="nubes">
+			<div class="anillo"></div>
+			<div id="planeta" class="mapa"></div>
+		</div>
+
+		<!-- informacion de los planetas -->
+		<article>
+			<h2>Lorem ipsum.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eaque sit ipsum, atque, totam recusandae iste facilis laboriosam consequatur alias at numquam quia est laborum doloribus aspernatur maiores mollitia autem!</p>
+		</article>
+
+	<!-- llamada al fichero con las funciones -->
+	<script src="js/funciones.js"></script>
+	</body>
+</html>
